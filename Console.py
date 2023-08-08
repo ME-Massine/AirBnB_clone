@@ -184,4 +184,12 @@ class AppConsole(cmd.Cmd):
             obj = object_dict["{}.{}".format(input_tokens[0], input_tokens[1])]
             for k, v in eval(input_tokens[2]).items():
                 if (k in obj.__class__.__dict__.keys() and
-                       
+                        type(obj.__class__.__dict__[k]) in {str, int, float}):
+                    val_type = type(obj.__class__.__dict__[k])
+                    obj.__dict__[k] = val_type(v)
+                else:
+                    obj.__dict__[k] = v
+        storage.save()
+
+if __name__ == "__main__":
+    AppConsole().cmdloop()
