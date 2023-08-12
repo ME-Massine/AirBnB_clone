@@ -22,14 +22,14 @@ class Location(BaseModel):
         feature_ids (list): A list of ids for the features of the location
 
     """
-    locale_id = ""
-    owner_id = ""
-    location_name = ""
-    details = ""
-    total_rooms = 0
-    total_bathrooms = 0
-    guest_capacity = 0
-    nightly_rate = 0
-    lat = 0.0
-    lon = 0.0
-    feature_ids = []
+    city_id = ""
+    user_id = ""
+    name = ""
+    description = ""
+    number_rooms = 0
+    number_bathrooms = 0
+    max_guest = 0
+    price_by_night = 0
+    latitude = 0.0
+    longitude = 0.0
+    amenity_ids = []
