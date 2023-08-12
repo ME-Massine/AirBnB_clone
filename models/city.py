@@ -9,10 +9,10 @@ class City(BaseModel):
     """A class that represents a city
 
     Attributes:
-        region_id (str): The id of the region
-        aname (str): The name of the locale
+        state_id (str): The id of the region
+        name (str): The name of the locale
 
     """
 
-    region_id = ""
-    aname = ""
+    state_id = ""
+    name = ""
