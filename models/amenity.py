@@ -9,7 +9,7 @@ class Amenity(BaseModel):
     """A class representing Amenity of a location or property
 
     Attributes:
-        aname(str): amenity name
+        name : amenity name
 
     """
-    aname = ""
+    name = ""
